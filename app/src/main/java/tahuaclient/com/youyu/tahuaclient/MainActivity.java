@@ -1,9 +1,11 @@
 package tahuaclient.com.youyu.tahuaclient;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -12,6 +14,9 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Button button = (Button) findViewById(R.id.demoButton);
+        button.setOnClickListener(v -> Toast.makeText(getApplicationContext(), "测试lambda", Toast.LENGTH_SHORT).show());
+
     }
 
     @Override
